@@ -33,3 +33,16 @@ ScrollReveal().reveal(".about_container .logoMid", {
     delay: 1500,
 });
 
+ScrollReveal().reveal(".service_container .section_header", {
+    ...scrollRevealOption,
+});
+ScrollReveal().reveal(".service_container .section_description", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+ScrollReveal().reveal(".service_card", {
+    ...scrollRevealOption,
+    duration: 1000,
+    delay: 1000,
+    interval: 500,
+});

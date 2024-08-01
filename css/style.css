@@ -19,7 +19,7 @@
     max-width: var(--max-width);
     margin: auto;
     padding: 5rem 1rem;
-    /* background: linear-gradient(45deg, #d9d8e5, #e5bf91); */
+
 }
 
 .section_header{
@@ -177,7 +177,7 @@ nav{
     content: "My Work";
 }
 .portfolio_card:nth-child(3)::after{
-    content: "Street Photography";
+    content: "Landscape";
 }
 .portfolio_card:nth-child(4)::after{
     content: "Street Photography";
@@ -200,8 +200,60 @@ nav{
     opacity: 1;
 }
 
+.service{
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,1.2)), url("/images/service.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service_container .section_header{
+    color: var(--white);
+}
+.service_container .section_description{
+    max-width: 600px;
+    margin-inline: auto;
+    color: var(--extra-light);
+}
+
+.service_grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.service_card{
+    text-align: center;
+}
+.service_card h4{
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+    color: var(--white);
+}
+
+.service_card h4::after{
+    position: absolute;
+    content: "~";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    line-height: 0;
+}
+.service_card P{
+    color: var(--extra-light);
+    line-height: 1.75rem;
+}
+
 @media (width > 540px){
     .portfolio_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service_grid{
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -248,10 +300,14 @@ nav{
         flex-direction: column;
         align-items: center;
     }
+   
 }
 
 @media (width > 1024px){
     .header{
         min-height: 700px
+    }
+    .service_grid{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
