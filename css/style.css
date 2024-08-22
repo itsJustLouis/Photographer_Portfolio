@@ -249,6 +249,70 @@ nav{
     line-height: 1.75rem;
 }
 
+.client_container{
+    padding-bottom: 2rem;
+}
+
+.swiper{
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    width: 100%;
+}
+
+.client_card{
+    max-width: 900px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.client_card img{
+    max-width: 120px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.client_card p{
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    line-height: 1.75rem;
+}
+
+.client_card h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--text-dark);
+}
+.gallery_container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery_grid{
+    margin-block: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+}
+
+.gallery_grid img{
+    transition: 0.3s;
+}
+
+.gallery_grid:hover img:not(:hover){
+    opacity: 0.5;
+}
+
+.gallery_btn{
+    text-align: center;
+}
+
 @media (width > 540px){
     .portfolio_grid{
         grid-template-columns: repeat(2, 1fr);
