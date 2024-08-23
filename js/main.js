@@ -53,3 +53,27 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-pagination",
     },
 });
+
+ScrollReveal().reveal(".blog_content .section_header", {
+    ...scrollRevealOption,
+});
+ScrollReveal().reveal(".blog_content h4", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+ScrollReveal().reveal(".blog_content p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+ScrollReveal().reveal(".blog_content .blog_btn", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
+
+const instagram = document.querySelector(".instagram_flex")
+
+Array.from(instagram.children).forEach((item) => {
+    const duplicateNode = item.cloneNode(true);
+    duplicateNode.setAttribute("aria-hidden", true);
+    instagram.appendChild(duplicateNode);
+});

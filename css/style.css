@@ -288,17 +288,18 @@ nav{
 .swiper-pagination-bullet-active {
     background-color: var(--text-dark);
 }
-.gallery_container{
-    display:flex;
+
+/* .gallery_container{
     align-items: center;
-    justify-content: center;
-}
+    align-content: center;
+    text-align: center;
+} */
 .gallery_grid{
     margin-block: 2rem;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    width: 50%;
+    /* width: 20%; */
 }
 
 .gallery_grid img{
@@ -313,6 +314,70 @@ nav{
     text-align: center;
 }
 
+.blog{
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("/images/goats.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.blog_container{
+    padding-block: 8rem;
+    display: grid;
+}
+
+.blog_content{
+    text-align: center;
+}
+
+.blog_content .section_header{
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.blog_content h4{
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+    color: var(--white);
+}
+
+.blog_content p{
+    margin-bottom: 2rem;
+    line-height: 1.75rem;
+    color: var(--extra-light);
+}
+
+.blog_content .btn{
+    background-color: transparent;
+    border: 1px solid var(--white);
+}
+
+.instagram_container{
+    overflow: hidden;
+}
+
+.instagram_flex{
+    margin-top: 2rem;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    animation: scroll 45s linear infinite;
+}
+
+.instagram_flex img{
+    max-width: 135px;
+}
+
+@keyframes scroll{
+    to{
+        transform: translateX(calc(-50% - 0.5rem));
+    }
+}
+
 @media (width > 540px){
     .portfolio_grid{
         grid-template-columns: repeat(2, 1fr);
@@ -320,13 +385,15 @@ nav{
     .service_grid{
         grid-template-columns: repeat(2, 1fr);
     }
+    .gallery_grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (width > 768px){
     .header{
         min-height: 650px;
     }
-
     nav{
         padding: 2rem 1rem;
         position: static;
@@ -364,7 +431,13 @@ nav{
         flex-direction: column;
         align-items: center;
     }
-   
+    .blog_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog_content{
+        grid-column: 2/3;
+    }
 }
 
 @media (width > 1024px){
@@ -372,6 +445,9 @@ nav{
         min-height: 700px
     }
     .service_grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .gallery_grid{
         grid-template-columns: repeat(4, 1fr);
     }
 }
